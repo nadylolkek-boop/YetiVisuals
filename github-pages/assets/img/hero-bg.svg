@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1a2b"/>
+      <stop offset="0.55" stop-color="#071321"/>
+      <stop offset="1" stop-color="#040a12"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#2a6c9e" stop-opacity=".55"/>
+      <stop offset="0.45" stop-color="#17496f" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#040a12" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="44%" r="76%">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#020812" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#020812" stop-opacity=".88"/>
+    </radialGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ea6e0" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#183a52" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="frost" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8adfff" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#1c4f70" stop-opacity=".18"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="mid" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#core)"/>
+
+  <!-- Ледяная пещера: крупные блоки, размытые -->
+  <g filter="url(#soft)">
+    <rect x="-60" y="-60" width="470" height="360" fill="#1d3a50"/>
+    <rect x="360" y="-60" width="370" height="240" fill="#24455e"/>
+    <rect x="700" y="-60" width="300" height="190" fill="#19364b"/>
+    <rect x="980" y="-60" width="420" height="300" fill="#234760"/>
+    <rect x="1360" y="-60" width="320" height="420" fill="#1b394f"/>
+
+    <rect x="-60" y="180" width="250" height="500" fill="#1c3b52"/>
+    <rect x="120" y="300" width="190" height="360" fill="#23465e"/>
+    <rect x="270" y="420" width="140" height="330" fill="#162f43"/>
+    <rect x="-60" y="680" width="420" height="280" fill="#13283a"/>
+
+    <rect x="1330" y="230" width="340" height="460" fill="#1f4158"/>
+    <rect x="1190" y="380" width="200" height="340" fill="#183448"/>
+    <rect x="1030" y="520" width="200" height="250" fill="#152d40"/>
+    <rect x="1180" y="700" width="480" height="260" fill="#102336"/>
+
+    <rect x="380" y="740" width="360" height="220" fill="#12293b"/>
+    <rect x="700" y="780" width="330" height="180" fill="#0e2030"/>
+
+    <rect x="180" y="120" width="260" height="110" fill="url(#ice)" opacity=".6"/>
+    <rect x="1160" y="150" width="300" height="130" fill="url(#frost)" opacity=".6"/>
+    <rect x="60" y="430" width="150" height="150" fill="#225d7d" opacity=".4"/>
+    <rect x="1300" y="470" width="180" height="170" fill="#2b5f80" opacity=".35"/>
+  </g>
+
+  <!-- Более чёткие ледяные блоки -->
+  <g filter="url(#mid)" opacity=".55">
+    <rect x="120" y="240" width="120" height="88" fill="#2c526b"/>
+    <rect x="248" y="292" width="96" height="70" fill="#26495f"/>
+    <rect x="76" y="352" width="134" height="80" fill="#2a4d64"/>
+    <rect x="330" y="380" width="82" height="64" fill="#213f55"/>
+    <rect x="1180" y="260" width="130" height="90" fill="#335673"/>
+    <rect x="1310" y="330" width="110" height="80" fill="#2b4c66"/>
+    <rect x="1260" y="450" width="120" height="86" fill="#28465f"/>
+    <rect x="1120" y="520" width="90" height="70" fill="#20394e"/>
+    <rect x="500" y="790" width="140" height="74" fill="#203a50"/>
+    <rect x="860" y="800" width="120" height="70" fill="#1a3043"/>
+  </g>
+
+  <!-- Снежинки -->
+  <g fill="#e6f7ff" opacity=".65">
+    <circle cx="420" cy="330" r="2.5"/><circle cx="470" cy="410" r="1.8"/>
+    <circle cx="1090" cy="360" r="2.2"/><circle cx="1210" cy="560" r="1.6"/>
+    <circle cx="690" cy="560" r="1.6"/><circle cx="960" cy="630" r="2"/>
+    <circle cx="280" cy="250" r="1.4"/><circle cx="1350" cy="260" r="1.7"/>
+    <circle cx="760" cy="300" r="1.3"/><circle cx="540" cy="620" r="1.5"/>
+  </g>
+  <g fill="#7cd0ff" opacity=".6">
+    <circle cx="1010" cy="270" r="2"/><circle cx="1320" cy="410" r="1.8"/>
+    <circle cx="260" cy="600" r="1.6"/><circle cx="780" cy="700" r="2"/>
+    <circle cx="600" cy="180" r="1.4"/><circle cx="1150" cy="660" r="1.6"/>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity=".45"/>
+</svg>
